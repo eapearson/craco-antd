@@ -19,20 +19,22 @@ jest --coverage --testPathIgnorePatterns test-app
 - Code is formatted with Prettier
 
 ```
-yarn prettier --write "**/*.{js,jsx,json,css,scss,html,md,yml}"
+npx prettier --write "**/*.{js,jsx,json,css,scss,html,md,yml}"
 ```
 
 - No ESLint warnings
 
 ```
-yarn eslint --fix --ext .js lib/
+npx eslint --fix --ext .js lib/
 ```
 
 - No security vulnerabilities in any NPM packages
 
 ```
-yarn audit
+npm audit
 ```
+
+> 7/9/2021: Cannot enforce this at this time; too many upstream security issues.
 
 You are also welcome to add your GitHub username to the [Contributors](#Contributors) section at the bottom of this README. (_optional_)
 
@@ -76,7 +78,7 @@ $ yarn add craco-antd antd
 
 # OR
 
-$ npm i -S craco-antd antd
+$ npm install --save craco-antd antd
 ```
 
 > `craco-antd` only has a "peer dependency" for `antd >= 3.0.0`. You should add `antd` to your own `package.json` and use a fixed version (e.g. `3.11.2`). Be careful when upgrading `antd`, because unexpected changes could break your application.
